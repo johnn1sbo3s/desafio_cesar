@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | CESAR</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar__left">
+        <img
+          src="assets/logo.png"
+          alt="Logo CESAR"
+          height="54px"
+        >
+
+        <div class="navbar__menu">
+          <a href="#" class="navbar__link">
+            Home
+          </a>
+
+          <a href="#" class="navbar__link--active">
+            Register
+          </a>
+
+          <a href="#" class="navbar__link">
+            About
+          </a>
+        </div>
+      </div>
+
+      <div class="navbar__right">
+        <div class="navbar__notifications">
+          <img
+            src="assets/bell-icon.svg"
+            alt="Notifications icon"
+            height="24px"
+          >
+
+          <span class="navbar__notifications-count">
+            5
+          </span>
+        </div>
+
+        <div class="navbar__profile-container">
+          <div class="navbar__profile">
+            <span class="navbar__avatar">
+              J
+            </span>
+
+            <span class="navbar__name">
+              Juliana
+            </span>
+          </div>
+
+          <img
+            src="assets/chevron-down-icon.svg"
+            alt="Chevron down icon"
+            height="24px"
+            width="24px"
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h1 id="panel-title">
+          Candidate Registration
+        </h1>
+
+        <form
+          id="registration-form"
+          class="form"
+        >
+          <div class="form-field">
+            <label
+              for="first-name"
+              class="form-field__label"
+            >
+              First name
+            </label>
+
+            <input
+              type="text"
+              id="first-name"
+              name="firstName"
+              class="form-field__input"
+              placeholder="Ex.: John"
+              aria-required="true"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label
+              for="last-name"
+              class="form-field__label"
+            >
+              Last name
+            </label>
+
+            <input
+              type="text"
+              id="last-name"
+              name="lastName"
+              class="form-field__input"
+              placeholder="Ex.: Doe"
+              aria-required="true"
+              required
+            >
+          </div>
+
+          <div class="form-field form-field--error">
+            <label
+              for="email"
+              class="form-field__label"
+            >
+              Email
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-field__input"
+              placeholder="john@email.com"
+              aria-invalid="true"
+              aria-describedby="email-error"
+            >
+
+            <span
+              id="email-error"
+              class="form-field__error-message"
+            >
+              Invalid email address
+            </span>
+          </div>
+
+          <div class="form-field">
+            <label
+              for="phone"
+              class="form-field__label"
+            >
+              Phone
+            </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form-field__input"
+              placeholder="Ex.: 5511900000000"
+              aria-required="true"
+              required
+            >
+          </div>
+
+          <div class="form-field form-field--full">
+            <label
+              for="address"
+              class="form-field__label"
+            >
+              Address (optional)
+            </label>
+
+            <input
+              type="text"
+              id="address"
+              name="address"
+              class="form-field__input"
+              placeholder="Ex.: Avenida Paulista, 123"
+              aria-required="false"
+            >
+          </div>
+
+          <div class="form-field form-field--full">
+            <label
+              for="cv-file"
+              class="form-field__label"
+            >
+              CV File
+            </label>
+
+            <label
+              for="cv-file"
+              class="form-field__file-area"
+            >
+              <img
+                src="assets/file-icon.svg"
+                alt="File icon"
+                height="24px"
+              >
+
+              <span class="form-field__file-text">
+                Drag and drop your files or click to select some.
+              </span>
+            </label>
+
+            <input
+              type="file"
+              id="cv-file"
+              name="cvFile"
+              class="form-field__file-input--hidden"
+              accept=".pdf,.doc,.docx,.odt"
+              aria-required="true"
+              required
+            >
+
+            <p class="form-field__file-hint">
+              Allowed files: .pdf, .doc and .odt
+            </p>
+          </div>
+        </form>
+
+        <div class="submit">
+          <button class="submit__button--primary">
+            Send
+          </button>
+
+          <button class="submit__button--secondary">
+            Clear
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="copyright">
+        © 2022 ACME. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

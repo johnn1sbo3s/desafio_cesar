@@ -36,7 +36,7 @@
       </div>
 
       <div class="navbar__right">
-        <div class="navbar__notifications">
+        <button class="navbar__notifications">
           <img
             src="assets/bell-icon.svg"
             alt="Notifications icon"
@@ -46,9 +46,9 @@
           <span class="navbar__notifications-count">
             5
           </span>
-        </div>
+        </button>
 
-        <div class="navbar__profile-container">
+        <button class="navbar__profile-container">
           <div class="navbar__profile">
             <span class="navbar__avatar">
               J
@@ -65,7 +65,7 @@
             height="24px"
             width="24px"
           >
-        </div>
+        </button>
       </div>
     </header>
 
@@ -188,21 +188,6 @@
               CV File
             </label>
 
-            <label
-              for="cv-file"
-              class="form-field__file-area"
-            >
-              <img
-                src="assets/file-icon.svg"
-                alt="File icon"
-                height="24px"
-              >
-
-              <span class="form-field__file-text">
-                Drag and drop your files or click to select some.
-              </span>
-            </label>
-
             <input
               type="file"
               id="cv-file"
@@ -213,21 +198,32 @@
               required
             >
 
+            <label
+              for="cv-file"
+              class="form-field__file-area"
+            >
+              <img src="assets/file-icon.svg" alt="File icon" height="24px">
+
+              <span class="form-field__file-text">
+                Drag and drop your files or click to select some.
+              </span>
+            </label>
+
             <p class="form-field__file-hint">
               Allowed files: .pdf, .doc and .odt
             </p>
           </div>
+
+          <div class="submit">
+            <button class="submit__button--primary">
+              Send
+            </button>
+
+            <button class="submit__button--secondary">
+              Clear
+            </button>
+          </div>
         </form>
-
-        <div class="submit">
-          <button class="submit__button--primary">
-            Send
-          </button>
-
-          <button class="submit__button--secondary">
-            Clear
-          </button>
-        </div>
       </section>
     </main>
 

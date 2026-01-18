@@ -90,6 +90,14 @@ footer {
   padding: var(--space-3);
 }
 
+a:focus {
+  outline: 1px solid var(--color-primary);
+}
+
+button:focus {
+  outline: 1px solid var(--color-primary);
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -141,6 +149,8 @@ footer {
   align-items: center;
   position: relative;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .navbar__notifications-count {
@@ -242,8 +252,7 @@ footer {
 }
 
 .form-field__input:focus {
-  outline: none;
-  border-color: var(--color-secondary);
+  outline: 1px solid var(--color-secondary);
 }
 
 .form-field--error .form-field__input {
@@ -274,6 +283,10 @@ footer {
   border: 0;
 }
 
+.form-field__file-input--hidden:focus {
+  outline: none;
+}
+
 .form-field__file-area {
   height: 156px;
   border: 1px dashed var(--color-border);
@@ -284,6 +297,10 @@ footer {
   gap: var(--space-2);
   border-radius: 12px;
   cursor: pointer;
+}
+
+.form-field__file-input--hidden:focus + .form-field__file-area {
+  outline: 1px solid var(--color-secondary);
 }
 
 .form-field__file-area:hover {
@@ -307,8 +324,6 @@ footer {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  width: 50%;
-  max-width: 280px;
 }
 
 .submit__button--primary {
@@ -330,6 +345,10 @@ footer {
   filter: brightness(1.2);
 }
 
+.submit__button--primary:focus {
+  outline: 1px solid var(--color-secondary);
+}
+
 .submit__button--secondary {
   font: var(--text-body-bold);
   color: var(--color-secondary);
@@ -349,6 +368,10 @@ footer {
 
 .submit__button--secondary:active {
   filter: brightness(1.2);
+}
+
+.submit__button--secondary:focus {
+  outline: 1px solid var(--color-primary);
 }
 
 .copyright {

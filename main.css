@@ -112,6 +112,10 @@ button:focus {
   gap: var(--space-6);
 }
 
+.navbar__logo {
+  display: block;
+}
+
 .navbar__menu {
   display: flex;
 }
@@ -406,11 +410,16 @@ button:focus {
   .form {
     display: flex;
     flex-direction: column;
-    gap: var(--space-3);
   }
 
   .submit {
     width: 100%;
     max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__logo {
+    display: none;
   }
 }

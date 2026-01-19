@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro | CESAR</title>
+    <title>Registration | CESAR</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,10 @@
           src="assets/logo.png"
           alt="Logo CESAR"
           height="54px"
+          class="navbar__logo"
         >
 
-        <div class="navbar__menu">
+        <nav class="navbar__menu">
           <a href="#" class="navbar__link">
             Home
           </a>
@@ -32,7 +33,7 @@
           <a href="#" class="navbar__link">
             About
           </a>
-        </div>
+        </nav>
       </div>
 
       <div class="navbar__right">
@@ -99,7 +100,6 @@
               name="firstName"
               class="form-field__input"
               placeholder="Ex.: John"
-              aria-required="true"
               required
             >
           </div>
@@ -118,7 +118,6 @@
               name="lastName"
               class="form-field__input"
               placeholder="Ex.: Doe"
-              aria-required="true"
               required
             >
           </div>
@@ -139,6 +138,7 @@
               placeholder="john@email.com"
               aria-invalid="true"
               aria-describedby="email-error"
+              required
             >
 
             <span
@@ -163,7 +163,6 @@
               name="phone"
               class="form-field__input"
               placeholder="Ex.: 5511900000000"
-              aria-required="true"
               required
             >
           </div>
@@ -182,7 +181,6 @@
               name="address"
               class="form-field__input"
               placeholder="Ex.: Avenida Paulista, 123"
-              aria-required="false"
             >
           </div>
 
@@ -200,7 +198,7 @@
               name="cvFile"
               class="form-field__file-input--hidden"
               accept=".pdf,.doc,.docx,.odt"
-              aria-required="true"
+              aria-describedby="cv-file-hint"
               required
             >
 
@@ -208,16 +206,23 @@
               for="cv-file"
               class="form-field__file-area"
             >
-              <img src="assets/file-icon.svg" alt="File icon" height="24px">
+              <img
+                src="assets/file-icon.svg"
+                alt="File icon"
+                height="24px"
+              >
 
               <span class="form-field__file-text">
                 Drag and drop your files or click to select some.
               </span>
             </label>
 
-            <p class="form-field__file-hint">
+            <small
+              id="cv-file-hint"
+              class="form-field__file-hint"
+            >
               Allowed files: .pdf, .doc and .odt
-            </p>
+            </small>
           </div>
 
           <div class="submit">

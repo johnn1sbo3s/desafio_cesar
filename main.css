@@ -328,6 +328,7 @@ button:focus {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  margin-top: var(--space-3);
 }
 
 .submit__button--primary {
